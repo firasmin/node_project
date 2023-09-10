@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body style="border:1px solid black;padding:8px">
+<h1>HTML DOM Events</h1>
+
+<form id="form">
+<input type="text" name="username">
+<input type="submit">
+</form>
+
+
+<p id="demo"></p>
+
+<script>
+
+let form=document.getElementById('form')
+form.addEventListener('submit',onsubmit)
+function onsubmit(e)
+{
+    e.preventDefault();
+    let username=e.target.username.value
+   console.log(username)
+}
+</script>
+</body>
+</html>
